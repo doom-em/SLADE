@@ -14,16 +14,11 @@ jobs:
       matrix:
         config:
 
-          - name: "Linux GCC"
-            os: ubuntu-24.04
+          - name: "Linux"
+            os: ubuntu-latest
             shell: bash
             package_name: "linux_amd64"
             artifact-path: build/*
-            
-          - name: "Linux Clang"
-            os: ubuntu-24.04
-            shell: bash
-            extra_options: "-DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++"
 
     steps:
     - uses: actions/checkout@v2
